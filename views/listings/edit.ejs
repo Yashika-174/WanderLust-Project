@@ -1,0 +1,76 @@
+<% layout("/layouts/boilerplate")%>
+
+<body>
+    <div class="form-big-container">
+
+    <div class="heading " ><h3><br>Edit your Listing</h3></div>
+    <div class="form_class">
+    <form method="post" action="/listings/<%=listing._id%>?_method=PATCH" novalidate class="needs-validation" enctype="multipart/form-data">
+
+<div class="mb-3">
+<label for="title" class="form-label">Title</label>
+         <input name="listing[title]" value="<%=listing.title%>" type="text" class="form-control" required />
+<div class="valid-feedback">Title Looks Good!</div>
+        <div class="invalid-feedback">Please Enter valid Title</div>
+</div>
+      
+
+<div class="mb-3">
+<label for="description" class="form-label">Description</label>
+      <textarea name="listing[description]" type="text" rows="10" cols="50" class="form-control" required/><%=listing.description%></textarea>
+      <div class="valid-feedback">Description Looks Fabulous!</div>
+        <div class="invalid-feedback">Please Enter valid Description</div>
+</div>
+      
+
+<div class="mb-3">
+  <b>Original Listing Image: </b><br>
+<img src="<%=originalImageUrl%>" height="150" widht="150" style="border:1px solid black; border-radius:6px ; margin: 8px 0px">
+</div>
+
+<div class="mb-3">
+<label for="image" class="form-label">Upload New Listing Image</label>
+      <input name="listing[image]"  type="file" class="form-control"  /> 
+      <div class="valid-feedback">Awesome!</div>
+</div>
+
+
+<div class="row">
+<div class="mb-3 col-md-4">
+<label for="price" class="form-label">Price</label>
+<input
+        name="listing[price]"
+        value="<%=listing.price%>" type="number" class="form-control" type="number" min="0" required/>
+        <div class="valid-feedback">Good!</div>
+        <div class="invalid-feedback">Price should be valid</div>
+</div>
+
+<div class="mb-3 col-md-8">
+<label for="country" class="form-label">Country</label>
+      <input name="listing[country]" value="<%=listing.country%>" type="text" class="form-control" required/>
+      <div class="valid-feedback">Nice!</div>
+        <div class="invalid-feedback">Country should be valid</div>
+      </div>
+
+</div>
+
+
+
+
+      <div class="mb-3">
+<label for="location" class="form-label">Location</label>
+      <input name="listing[location]" value="<%=listing.location%>" type="text" class="form-control" required/>
+      <div class="valid-feedback">Nice!</div>
+        <div class="invalid-feedback">Location should be valid</div>
+      </div>
+      
+  
+      <button class="btn btn-dark update-btn mt-0 mb-3">Update</button>
+    </form>
+  </div>
+  </div>
+</body>
+
+
+<!-- agr koi error ata hai -> ki script.js se connect nhi hopaya -> means class="needs-validation" ki functionality nhi work kr rhi edit.ejs ke lie -> to here also </body> ke uppr  script tag ko include kr skte hai -->
+<!-- Lekin hmara error nhi aya aisa -> shradha didi ka aya tha -->

@@ -1,0 +1,75 @@
+<% layout("/layouts/boilerplate")%>
+
+<!-- enctype="multipart/form-data" this will allow form to receive file format data also --> 
+
+<!--because due to  -> app.use(express.urlencoded({ extended: true })); -> express is only allowed to recieve urlencoded data-->
+
+  <body>
+    <div class="form-big-container">
+      
+    <div class="heading"><h3><br>Create a New Listing</h3></div>
+    <div class="form_class">
+    <form method="post" action="/listings" novalidate class="needs-validation"  enctype="multipart/form-data">
+      <div class="mb-3">
+<label for="title" class="form-label">Title</label>
+
+      
+<!-- invalid-feedback tb kaam krega jb empty field chor denge and valid-feedback tb kaam krega jb empty field nhi chorenge -->
+<!-- valid,invalid ka type (string,number,negative,positive se koi mtlb nhi hai) -->
+
+      <input name="listing[title]" placeholder="enter a catchy title" type="text"  class="form-control" required/>
+      <div class="valid-feedback">Title Looks Good!</div>
+        <div class="invalid-feedback">Please Enter valid Title</div>
+
+      </div>
+
+
+      <div class="mb-3">
+<label for="description" class="form-label">Description</label>
+      <textarea name="listing[description]" placeholder="enter description" type="text" rows="10" cols="50" class="form-control" required/></textarea>
+      <div class="valid-feedback">Description Looks Fabulous!</div>
+        <div class="invalid-feedback">Please Enter valid Description</div>
+      </div>
+
+
+            <div class="mb-3">
+<label for="image" class="form-label">Upload Listing Image</label>
+  <input name="listing[image]" type="file"  class="form-control" required /> 
+      </div>
+
+      <!-- type="number" krne se up down arrows aajate hai taki hum sirf number hi enter kr paye -->
+      <!-- type="text" can include anything from keyboard -->
+<div class="row">
+<div class="mb-3 col-md-4">
+<label for="price" class="form-label">Price</label>
+<input
+        name="listing[price]"
+        placeholder="1200"   class="form-control" required  type="number" min="0"/>
+        <div class="valid-feedback">Good!</div>
+        <div class="invalid-feedback">Price should be valid</div>
+      </div>
+
+
+       <div class="mb-3 col-md-8">
+<label for="country" class="form-label">Country</label>
+      <input name="listing[country]" placeholder="India" type="text" class="form-control" required/>
+       <div class="valid-feedback">Nice!</div>
+        <div class="invalid-feedback">Country should be valid</div>
+      </div>
+</div>
+      
+      
+
+      <div class="mb-3">
+<label for="location" class="form-label">Location</label>
+      <input name="listing[location]" placeholder="Jaipur,Rajasthan" type="text" class="form-control" required/>
+      <div class="valid-feedback">Nice!</div>
+        <div class="invalid-feedback">Location should be valid</div>
+      </div>
+
+      <button class="btn btn-dark add-btn" >Add</button>
+    </form>
+    </div>
+    </div>
+  </body>
+

@@ -1,0 +1,262 @@
+body {
+    font-family: "Plus Jakarta Sans", sans-serif !important;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+footer {
+    margin-top: auto;
+}
+
+.navbar {
+    height: 5rem;
+    background-color: white;
+}
+
+.fa-compass {
+    color: #fe424d;
+}
+
+.nav-link {
+    color: #222222 !important;
+}
+
+.f-info-links a {
+    text-decoration: none;
+    color: #222222;
+}
+
+.f-info-links a:hover {
+    text-decoration: underline;
+}
+
+.f-info-links,
+.f-info-socials,
+.f-info-brand {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.f-info-socials i {
+    margin-right: 1rem;
+    font-size: 1.5rem;
+}
+
+.f-info {
+    text-align: center;
+    display: flex;
+    height: 8rem;
+    background-color: #ebebeb;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: space-evenly;
+}
+
+.row {
+    justify-content: center !important;
+    justify-content: center !important;
+    align-items: space-evenly !important;
+    width: 100% !important;
+}
+
+.row a {
+
+    text-decoration: none !important;
+    justify-content: center !important;
+    align-items: center !important;
+    padding-left: 30px !important;
+    width: 21rem;
+}
+
+.container {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+}
+
+.listing-card {
+    border: none !important;
+    margin-bottom: 2rem !important;
+}
+
+.card-img-top {
+    border-radius: 1rem !important;
+    width: 100% !important;
+    object-fit: cover !important;
+}
+
+.card-body {
+    padding: 0px !important;
+}
+
+.card-text p {
+    font-weight: 400 !important;
+}
+
+.big-container {
+    border: 2px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.heading {
+    width: 100%;
+    padding-left: 40px;
+    text-align: center;
+
+}
+
+.card-img-overlay {
+    opacity: 0;
+}
+
+.card-img-overlay:hover {
+    opacity: 0.2;
+    background-color: white;
+}
+
+
+
+.form-big-container {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100% !important;
+    margin: auto !important;
+    justify-content: center;
+}
+
+.add-btn,
+.update-btn {
+    margin: 10px 192px;
+    width: 90px;
+    background-color: #fe424d !important;
+    border: none !important;
+}
+
+.show-img {
+    height: 50vh;
+}
+
+.btns {
+    display: flex;
+    justify-content: center;
+}
+
+.edit-btn,
+.delete-btn {
+    background-color: #fe424d !important;
+}
+
+body::-webkit-scrollbar {
+    height: 15px;
+    width: 8px;
+}
+
+body::-webkit-scrollbar-track {
+    background-color: whitesmoke;
+}
+
+body::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background: linear-gradient(grey, grey);
+}
+
+.filters-container {
+    position: sticky;
+    top: 10px;
+    z-index: 999;
+    display: flex;
+    overflow-x: hidden;
+    /* Allow horizontal scroll */
+    white-space: nowrap;
+    background-color: white;
+    margin-bottom: 50px;
+    width: 100%;
+    box-sizing: border-box;
+    top: 10px;
+    z-index: 999;
+}
+
+.filters {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    overflow-x: auto;
+    padding: 8px 25px;
+    /* Adjust padding as needed */
+}
+
+.filters::-webkit-scrollbar {
+    height: 5px;
+    width: 10%;
+}
+
+.filters::-webkit-scrollbar-track {
+    background-color: whitesmoke;
+}
+
+.filters::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background: linear-gradient(grey, grey);
+}
+
+.filter {
+    display: inline-block;
+    margin-right: 2rem;
+    opacity: 0.7;
+    text-align: center;
+}
+
+.filter:hover {
+    opacity: 1;
+    cursor: pointer;
+}
+
+.filter p {
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+.listing-card img {
+    object-fit: cover;
+}
+
+
+#map {
+    height: 350px;
+    width: 120vh;
+    margin-bottom: 30px;
+    align-items: center;
+    border: 1px dotted black;
+    border-radius: 10px;
+}
+
+.btn-search {
+    background-color: #fe424d !important;
+    color: white !important;
+    border-radius: 25px !important;
+    padding: 0 1rem 0 1rem !important;
+    opacity: 0.8 !important;
+}
+
+.btn-search:hover {
+    background-color: #fe424d !important;
+    color: white !important;
+    opacity: 1 !important;
+}
+
+.btn-search i {
+    display: inline;
+    margin-right: 0.5rem;
+}
+
+.search-inp {
+    border-radius: 25px !important;
+    padding: 0.5rem 2rem !important;
+    font-size: 1rem !important;
+}
