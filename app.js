@@ -83,6 +83,11 @@ app.use((req, res, next) => {
     next();
 });
 
+// Add a root route
+app.get("/", (req, res) => {
+    res.send("Welcome to Wanderlust!");
+});
+
 app.use("/listings", listingRouter);
 app.use("/listings/:id/reviews", reviewRouter);
 app.use("/", userRouter);
