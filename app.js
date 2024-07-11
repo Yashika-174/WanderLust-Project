@@ -40,6 +40,9 @@ app.use(express.urlencoded({ extended: true }));
 app.use(methodOverride("_method"));
 app.engine('ejs', ejsMate);
 app.use(express.static(path.join(__dirname, "/public")));
+app.use(express.static(path.join(__dirname, "/public/css")));
+app.use(express.static(path.join(__dirname, "/public/js")));
+
 
 const store = MongoStore.create({
     mongoUrl: dbUrl,
@@ -95,7 +98,7 @@ app.all("*", (req, res, next) => {
 
 app.use((err, req, res, next) => {
     let { statusCode = 500, message = "Something went wrong" } = err;
-    res.status(statusCode).render("error.ejs", { message });
+    res.status(statusCode).render("listings/error.ejs", { err, message });
 });
 
 app.listen(3000, () => {
